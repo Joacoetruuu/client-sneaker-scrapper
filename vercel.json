@@ -1,20 +1,5 @@
 {
-    "headers": [
-      {
-        "source": "/(.*).(js|css)",
-        "headers": [
-          {
-            "key": "Content-Type",
-            "value": "text/$2"
-          }
-        ]
-      }
-    ],
-    "routes": [
-      {
-        "src": "/assets/index-*.js",
-        "headers": { "content-type": "text/javascript" }
-      }
-    ]
-  }
+    "rewrites":[{"source": "/(.*)","destination": "/"}]
+}
+    
   
