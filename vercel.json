@@ -1,20 +1,19 @@
 {
     "headers": [
-        {
-          "source": "/(.*).(js|css)",
-          "headers": [
-            {
-              "key": "Content-Type",
-              "value": "text/$2"
-            }
-          ]
-        }
-      ],
-
+      {
+        "source": "/(.*).(js|css)",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "text/$2"
+          }
+        ]
+      }
+    ],
     "routes": [
       {
-        "src": "/(.*)",
-        "dest": "/index.html"
+        "src": "/assets/index-*.js",
+        "headers": { "content-type": "text/javascript" }
       }
     ]
   }
