@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { moov, getGrid, getDigital, newBalance, dexter,funcarral,drops } from "../../scripts/getSearch"
-import { Text, Center, Box} from '@chakra-ui/react'
+import { Text, Center, Box, Spinner} from '@chakra-ui/react'
 
 
 export function CardSearch() {
@@ -48,30 +48,20 @@ export function CardSearch() {
 
   }, [inputUrl[inputUrl.length-1]])
 
+    if(moovResults.length ==0 || gridResults.length ==0 || digitalsportResults.length == 0 || newBalanceResults.length == 0 || dexterResults== 0 || dropsResults ==0 ){
+      return (
+<div class="container">
+    <div class="spinner"></div>
+    <p>Espere por favor</p>
+</div>
+
+    )
+
+    } 
 
     return (
-        <>
+        <>  
         
-        {
-            dropsResults.status === 404 ? "" :
-
-            dropsResults.map((e, index) => {
-                const { title, price, href, img, storeLogo } = e;
-
-                return(
-                    <Center key={index}>
-                    <div className="card">
-                      <a href={href} target="_blank">
-                        <img src={img} alt="" />
-                        <img className="storeLogo" src={storeLogo} alt="" />
-                        <p className="title">{title}</p>
-                        <p className="price">{price.replace(",", ".")}</p>
-                      </a>
-                    </div>
-                  </Center>
-                )
-            })
-        }
         {
                         gridResults.status === 404 ? "" :
 
@@ -112,6 +102,29 @@ export function CardSearch() {
                             )
                         })
         }
+
+        {
+                    dropsResults.status === 404 ? "" :
+
+                    dropsResults.map((e, index) => {
+                        const { title, price, href, img, storeLogo } = e;
+
+                        return(
+                            <Center key={index}>
+                            <div className="card">
+                              <a href={href} target="_blank">
+                                <img src={img} alt="" />
+                                <img className="storeLogo" src={storeLogo} alt="" />
+                                <p className="title">{title}</p>
+                                <p className="price">{price.replace(",", ".")}</p>
+                              </a>
+                            </div>
+                          </Center>
+                        )
+                    })
+                }
+
+
         {               
                         digitalsportResults.status === 404 ? "" :
 
@@ -172,6 +185,8 @@ export function CardSearch() {
                         )
                     })
         }
+
+
 
         </>
     )

@@ -75,3 +75,32 @@
         font-weight: bold;
     }
 }
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh; /* ajusta el alto del contenedor según tus necesidades */
+    
+  }
+
+  .container > p{
+    padding: 20px;
+    color: #0064fa;
+  }
+  
+  .spinner {
+    border: 8px solid #f3f3f3; /* Estilos del spinner */
+    border-top: 8px solid #0064fa;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
