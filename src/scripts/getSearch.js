@@ -2,9 +2,15 @@ export async function getGrid(input){
     const res = await fetch(`https://hypescrap-production.up.railway.app/grid/${input}`).catch(error => console.log("error", error))
 
     if(res === undefined){
-        return [{
-            "status": "404"
-        }]
+        return [
+            {
+                "title": "title",
+                "price": "price",
+                "img": "img",
+                "href": "href",
+                "storeLogo": "storeLogo"
+            }
+        ]
     }
     
     const data = await res.json(); 
@@ -16,9 +22,15 @@ export async function getDigital(input){
     const res = await fetch(`https://hypescrap-production.up.railway.app/digitalsport/${input}`).catch(error => console.log("error", error))
     
     if(res === undefined){
-        return [{
-            "status": "404"
-        }]
+        return [
+            {
+                "title": "title",
+                "price": "price",
+                "img": "img",
+                "href": "href",
+                "storeLogo": "storeLogo"
+            }
+        ]
     }
 
     const data = await res.json();
@@ -31,9 +43,15 @@ export async function moov(input){
     
         
     if(res === undefined){
-        return [{
-            "status": "404"
-        }]
+        return [
+            {
+                "title": "title",
+                "price": "price",
+                "img": "img",
+                "href": "href",
+                "storeLogo": "storeLogo"
+            }
+        ]
     }
 
     const data = await res.json(); 
@@ -47,9 +65,15 @@ export async function newBalance(input){
     const res  = await fetch(`https://hypescrap-production.up.railway.app/newbalance/${input}`).catch(error => console.log("error", error))
 
     if(res === undefined){
-        return [{
-            "status": "404"
-        }]
+        return [
+            {
+                "title": "title",
+                "price": "price",
+                "img": "img",
+                "href": "href",
+                "storeLogo": "storeLogo"
+            }
+        ]
     }
 
 
@@ -62,9 +86,15 @@ export async function dexter(input){
     const res  = await fetch(`https://hypescrap-production.up.railway.app/dexter/${input}`).catch(error => console.log("error", error))
 
     if(res === undefined){
-        return [{
-            "status": "404"
-        }]
+        return [
+            {
+                "title": "title",
+                "price": "price",
+                "img": "img",
+                "href": "href",
+                "storeLogo": "storeLogo"
+            }
+        ]
     }
 
     const data = await res.json(); 
@@ -74,12 +104,20 @@ export async function dexter(input){
 
 export async function funcarral(input){
     const res  = await fetch(`https://hypescrap-production.up.railway.app/funcarral/${input}`).catch(error => console.log("error", error))
-    const data = await res.json(); 
-    if(data === undefined){
-        return [{
-            "status": "404"
-        }]
+    
+    if(res === undefined){
+        return [
+            {
+                "title": "title",
+                "price": "price",
+                "img": "img",
+                "href": "href",
+                "storeLogo": "storeLogo"
+            }
+        ]
     }
+    const data = await res.json(); 
+
     return data
 }
 
@@ -87,9 +125,15 @@ export async function drops(input){
     const res  = await fetch(`https://hypescrap-production.up.railway.app/drops/${input}`).catch(error => console.log("error", error))
 
     if(res === undefined){
-        return [{
-            "status": "404"
-        }]
+        return [
+            {
+                "title": "title",
+                "price": "price",
+                "img": "img",
+                "href": "href",
+                "storeLogo": "storeLogo"
+            }
+        ]
     }
 
     const data = await res.json(); 
