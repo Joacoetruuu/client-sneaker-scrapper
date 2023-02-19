@@ -4,8 +4,10 @@ import { Text, Center, Box} from '@chakra-ui/react'
 
 
 export function CardSearch() {
-    
-    const [moovResults, setMoov] = useState([]); 
+  
+    try{
+
+      const [moovResults, setMoov] = useState([]); 
     const [gridResults, setGrid] = useState([]); 
     const [digitalsportResults, setDigitalSport] = useState([]); 
     const [newBalanceResults, setNewBalance] = useState([]); 
@@ -45,6 +47,7 @@ export function CardSearch() {
       results()
 
   }, [inputUrl[inputUrl.length-1]])
+
 
     return (
         <>
@@ -172,4 +175,11 @@ export function CardSearch() {
 
         </>
     )
+
+    }
+    catch(error){
+      console.log("Error", error)
+    }
+
+    
 }
