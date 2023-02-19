@@ -61,7 +61,7 @@ export function CardSearch() {
     )
 
     } 
-
+    document.getElementsByClassName("gridCardSearch")[0].style.gridGap = "70px"
     return (
         <>  
         
