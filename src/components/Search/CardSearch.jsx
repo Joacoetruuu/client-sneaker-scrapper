@@ -5,9 +5,9 @@ import { Text, Center, Box} from '@chakra-ui/react'
 
 export function CardSearch() {
   
-    try{
+    
 
-      const [moovResults, setMoov] = useState([]); 
+    const [moovResults, setMoov] = useState([]); 
     const [gridResults, setGrid] = useState([]); 
     const [digitalsportResults, setDigitalSport] = useState([]); 
     const [newBalanceResults, setNewBalance] = useState([]); 
@@ -175,11 +175,4 @@ export function CardSearch() {
 
         </>
     )
-
-    }
-    catch(error){
-      console.log("Error", error)
-    }
-
-    
 }
