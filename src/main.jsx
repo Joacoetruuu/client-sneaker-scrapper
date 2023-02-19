@@ -23,6 +23,10 @@ const router = createBrowserRouter([
     path: "/search/:query",
     element: <><Nav></Nav> <Search/></>,
   },
+  {
+    path: "*",
+    element: <><h1>Not found</h1></>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
