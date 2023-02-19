@@ -85,12 +85,13 @@
     
   }
 
-  .container > p{
-    padding: 20px;
+  .container > div > p{
+    margin: auto;
     color: #0064fa;
   }
   
   .spinner {
+    margin: auto;
     border: 8px solid #f3f3f3; /* Estilos del spinner */
     border-top: 8px solid #0064fa;
     border-radius: 50%;
