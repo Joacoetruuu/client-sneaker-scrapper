@@ -7,6 +7,10 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+if("https://client-sneaker-scrapper-7or4.vercel.app/search/"+localStorage.getItem("search") === undefined){
+  console.log("undefined 404")
+} 
+
 import { Search } from './components/Search/Search';
 import { Nav } from './components/nav/Nav';
 
