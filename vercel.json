@@ -1,4 +1,16 @@
 {
+    "headers": [
+        {
+          "source": "/(.*).(js|css)",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "text/$2"
+            }
+          ]
+        }
+      ],
+
     "routes": [
       {
         "src": "/(.*)",
