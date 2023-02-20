@@ -18,6 +18,7 @@ export function Search() {
             width={"100%"}
             height="5px"            
             bgGradient="linear(to-l, #3182ce, #0064fa)"
+            marginTop={"10px"}
           />
       
           <div className="gridCardSearch">
