@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import { moov, getGrid, getDigital, newBalance, dexter,funcarral,drops } from "../../scripts/getSearch"
 import { Text, Center, Box, Spinner} from '@chakra-ui/react'
-import { SinResultado } from "../404/sinResultado";
-import { Footer } from "../Footer/Footer";
+
+
 
 export function CardSearch() {
   
