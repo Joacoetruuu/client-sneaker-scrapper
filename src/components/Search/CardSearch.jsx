@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import { moov, getGrid, getDigital, newBalance, dexter,funcarral,drops } from "../../scripts/getSearch"
 import { Text, Center, Box, Spinner} from '@chakra-ui/react'
-
+import { SinResultado } from "../404/sinResultado";
+import { Footer } from "../Footer/Footer";
 
 export function CardSearch() {
   
@@ -55,13 +56,14 @@ export function CardSearch() {
     <div style={{display:"block"}}>
       <div className="spinner"></div> <br />
       <p>Espere por favor</p>
-    </div>
+    </div>  
+
 
 </div>
 
     )
-
-    } 
+    }
+  
     document.getElementsByClassName("gridCardSearch")[0].style.gridGap = "70px"
     return (
         <>  
@@ -202,7 +204,9 @@ export function CardSearch() {
         
 
 
-
         </>
     )
+
+
+
 }

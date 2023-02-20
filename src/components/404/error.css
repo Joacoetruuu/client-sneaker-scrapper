@@ -1,0 +1,31 @@
+.error404{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 99vw;
+    
+}
+
+div.error404 > div > img.jordan1{
+    max-height: 30vh;
+    max-width: 30vw;
+    margin: auto;
+    padding: 40px;
+}   
+
+@media only screen and (max-width: 768px) {
+
+    .error404 > div >p{
+        padding-left: 50px;
+        
+    }
+
+    div.error404 > div > img.jordan1{
+        max-height: 80vh;
+        max-width: 80vw;
+        margin: auto;
+        padding: 40px;
+    }   
+
+}
