@@ -33,3 +33,51 @@
         
     }
 }
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    
+    .bannerGrid img{
+        
+        max-height: 200px;
+        max-width: 250px;
+        border-radius: 20px;
+        place-content: center;
+        margin: auto;
+        
+    }
+
+}
+
+
+
+@media only screen and (min-width: 1025px) and (max-width: 1239px) {
+    
+
+    .bannerGrid img{
+        
+        max-width: 50px;
+        max-height: 50px;
+
+        border-radius: 100px;
+        place-content: center;
+        margin: auto;
+        
+        
+    }
+
+}
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1434px) {
+    
+    .bannerGrid img{
+        
+        max-height: 300px;
+        max-width: 400px;
+        border-radius: 20px;
+        place-content: center;
+        margin: auto;
+        
+    }
+
+}

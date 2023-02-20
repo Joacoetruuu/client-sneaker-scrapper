@@ -106,3 +106,30 @@
     100% { transform: rotate(360deg); }
   }
   
+@media only screen and (min-width: 768px) and (max-width: 997px) {
+    
+    .gridCardSearch{
+        display: grid;
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center; /* centra horizontalmente los elementos */
+        margin: 80px 200px;
+        height: 50vh;
+        
+    }
+
+}
+
+@media only screen and (min-width: 998px) and (max-width: 1549px) {
+    
+    .gridCardSearch{
+        display: grid;
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center; /* centra horizontalmente los elementos */
+        margin: 80px 200px;
+        height: 50vh;
+        
+    }
+
+}

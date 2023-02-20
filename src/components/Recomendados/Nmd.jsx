@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import { getDigital, getGrid } from "../../scripts/getSearch"
-import { Text, Center, Box} from '@chakra-ui/react'
+import { Text, Center, Box, Stack, SkeletonText } from '@chakra-ui/react'
 import "./recomendados.css"
+import { SkeletonRecomendados } from "./SkeletonRecomendados"
 
 
 function Nmd() {
@@ -40,6 +41,13 @@ function Nmd() {
 
        
         {
+
+            document.querySelector("div.cardLanding") === null ? 
+
+            SkeletonRecomendados()
+
+            :
+
             nmd.map((e, index) => {
 
                 const {title, price, href, img, storeLogo} = e

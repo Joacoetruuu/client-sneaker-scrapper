@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react"
 import { getGrid } from "../../scripts/getSearch"
-import { Text, Center, Box} from '@chakra-ui/react'
+import { Text, Center, Box, Stack, SkeletonText } from '@chakra-ui/react'
 import "./recomendados.css"
+import { SkeletonRecomendados } from "./SkeletonRecomendados";
+
+
 
 function Jordan() {
   const [jordan, setJordan] = useState([]);
@@ -32,8 +35,14 @@ function Jordan() {
             </Text>
           </Box>
         </Center>
+        {
+        document.querySelector("div.cardLanding") === null ? 
+        
+        SkeletonRecomendados()
 
-        {jordan.map((e, index) => {
+        : 
+
+        jordan.map((e, index) => {
           const { title, price, href, img, storeLogo } = e;
 
           if (index < 5) {
