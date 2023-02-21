@@ -58,7 +58,7 @@ function Nmd() {
                     return(
                                 <Center key={index}>
                                 <div className="cardLanding">
-                                    <a href={"https://www.digitalsport.com.ar"+href} target="_blank"> 
+                                    <a href={`../product/digitalsport/${href[1]}/${href[2]}/${href[3]}`} target="_blank"> 
                                     <img src={img} alt=""/>
                                     <img className="storeLogo" src={storeLogo} alt="" />
                                     <p className="title">{title}</p>

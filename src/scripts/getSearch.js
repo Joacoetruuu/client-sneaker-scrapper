@@ -154,36 +154,6 @@ export async function dexter(input){
 
 }
 
-export async function funcarral(input){
-    try{
-
-        const res  = await fetch(`https://hypescrap-production.up.railway.app/funcarral/${input}`).catch(error => console.log("error", error))
-    
-        if(res === undefined){
-            return [
-                {
-                    "title": "title",
-                    "price": "price",
-                    "img": "img",
-                    "href": "href",
-                    "storeLogo": "storeLogo"
-                }
-            ]
-        }
-        const data = await res.json(); 
-    
-        return data
-
-    }
-    catch(error){
-        return [
-            {"status": error}
-        ]
-    }
-
-}
-
-
 
 export async function drops(input){
     try{

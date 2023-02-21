@@ -17,6 +17,9 @@ function Jordan() {
   }, []);
 
   return (
+
+    jordan != [] ? 
+
     <>
       <div className="divJordan">
         <Center>
@@ -49,7 +52,7 @@ function Jordan() {
             return (
               <Center key={index}>
                 <div className="cardLanding">
-                  <a href={"https://www.grid.com.ar" + href} target="_blank">
+                  <a href={"/product/grid/"+href} target="_blank">
                     <img src={img} alt="" />
                     <img className="storeLogo" src={storeLogo} alt="" />
                     <p className="title">{title}</p>
@@ -62,6 +65,9 @@ function Jordan() {
         })}
       </div>
     </>
+
+    :
+    ""
   );
 }
 

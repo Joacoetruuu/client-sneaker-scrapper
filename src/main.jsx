@@ -3,11 +3,18 @@ import ReactDOM from "react-dom/client";
 import App from "./components/App";
 import { ChakraProvider, Box } from "@chakra-ui/react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
 import { Search } from "./components/Search/Search";
 import { Nav } from "./components/nav/Nav";
 import { Error404 } from "./components/404/404";
 import { Footer } from "./components/Footer/Footer";
+import { Product } from "./components/Product/grid/ProductGrid";
+import { ProductMoov } from "./components/Product/moov/ProductMoov";
+import { ProductDigitalSport } from "./components/Product/digitalSport/ProductDigitalSport";
+import { ProductDexter } from "./components/Product/dexter/ProductDexter";
+import { DropsProduct } from "./components/Product/drops/DropsProduct";
+import { ProductNewBalance } from "./components/Product/newBalance/ProductNewBalance";
+
+
 const router = createBrowserRouter([
   {
     path: "/search",
@@ -22,6 +29,57 @@ const router = createBrowserRouter([
     ),
   },
   {
+    path: "/product/grid/:query/*",
+    element: (
+      <>
+        <Nav></Nav> <Product/>
+      </>
+    ),
+  },
+  {
+    path: "/product/moov/:query/:query",
+    element: (
+      <>
+        <Nav></Nav> <ProductMoov/>
+      </>
+    ),
+  },
+  {
+    path: "/product/dexter/:query/:query",
+    element: (
+      <>
+        <Nav></Nav> <ProductDexter/>
+      </>
+    ),
+  },
+  {
+    path: "/product/digitalsport/:query/:query/:query",
+    element: (
+      <>
+        <Nav></Nav> <ProductDigitalSport/>
+      </>
+    ),
+  },
+
+  {
+    path: "/product/drops/:query",
+    element: (
+      <>
+        <Nav></Nav> <DropsProduct/>
+      </>
+    ),
+  },
+
+  {
+    path: "/product/newbalance/:query",
+    element: (
+      <>
+        <Nav></Nav> <ProductNewBalance/>
+      </>
+    ),
+  },
+  
+  {
     path: "/search/:query",
     element: (
       <>
@@ -29,6 +87,7 @@ const router = createBrowserRouter([
       </>
     ),
   },
+  
   {
     path: "*",
     element: (

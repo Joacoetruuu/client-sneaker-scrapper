@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { moov, getGrid, getDigital, newBalance, dexter,funcarral,drops } from "../../scripts/getSearch"
+import { moov, getGrid, getDigital, newBalance, dexter,drops } from "../../scripts/getSearch"
 import { Text, Center, Box, Spinner} from '@chakra-ui/react'
 
 
@@ -13,7 +13,6 @@ export function CardSearch() {
     const [digitalsportResults, setDigitalSport] = useState([]); 
     const [newBalanceResults, setNewBalance] = useState([]); 
     const [dexterResults, setDexter] = useState([]); 
-    const [funcarralResults, setFuncarral] = useState([]); 
     const [dropsResults, setDrops] = useState([]); 
 
     const url = window.location.href
@@ -27,7 +26,6 @@ export function CardSearch() {
             setDigitalSport(await getDigital(inputUrl[inputUrl.length - 1]))
             setNewBalance(await newBalance(inputUrl[inputUrl.length - 1]))
             setDexter(await dexter(inputUrl[inputUrl.length - 1]))
-            setFuncarral(await funcarral(inputUrl[inputUrl.length - 1]))
             setDrops(await drops(inputUrl[inputUrl.length - 1]))  
             
         }
@@ -43,7 +41,6 @@ export function CardSearch() {
           setDigitalSport(await getDigital(inputUrl[inputUrl.length - 1]))
           setNewBalance(await newBalance(inputUrl[inputUrl.length - 1]))
           setDexter(await dexter(inputUrl[inputUrl.length - 1]))
-          setFuncarral(await funcarral(inputUrl[inputUrl.length - 1]))
           setDrops(await drops(inputUrl[inputUrl.length - 1]))
       }
       results()
@@ -77,7 +74,7 @@ export function CardSearch() {
                             return(
                                 <Center key={index}>
                                 <div className="card">
-                                  <a href={"https://www.grid.com.ar"+href} target="_blank">
+                                  <a href={"../product/grid/"+href} target="_blank">
                                     <img src={img} alt="" />
                                     <img className="storeLogo" src={storeLogo} alt="" />
                                     <p className="title">{title}</p>
@@ -97,7 +94,7 @@ export function CardSearch() {
                             return(
                                 <Center key={index}>
                                 <div className="card">
-                                  <a href={"https://www.moov.com.ar"+href} target="_blank">
+                                  <a href={`../product/moov/${href[1]}/${href[2]}`} target="_blank">
                                     <img src={img} alt="" />
                                     <img style={{backgroundColor: "black"}} className="storeLogo" src={storeLogo} alt="" />
                                     <p className="title">{title}</p>
@@ -118,7 +115,7 @@ export function CardSearch() {
                             return(
                                 <Center key={index}>
                                 <div className="card">
-                                  <a href={"https://digitalsport.com.ar"+href} target="_blank">
+                                  <a href={`../product/digitalsport/${href[1]}/${href[2]}/${href[3]}`} target="_blank">
                                     <img src={img} alt="" />
                                     <img className="storeLogo" src={storeLogo} alt="" />
                                     <p className="title">{title}</p>
@@ -131,29 +128,6 @@ export function CardSearch() {
         }
 
 
-
-
-
-        {              
-                        newBalanceResults.status === 404 ? "" :
-
-                       newBalanceResults.map((e, index) => {
-                        const { title, price, href, img, storeLogo } = e;
-        
-                        return(
-                            <Center key={index}>
-                            <div className="card">
-                              <a href={href} target="_blank">
-                                <img src={img} alt="" />
-                                <img className="storeLogo" src={storeLogo} alt="" />
-                                <p className="title">{title}</p>
-                                <p className="price">{price.replace(",", ".")}</p>
-                              </a>
-                            </div>
-                          </Center>
-                        )
-                    })
-        }
         
         {              
                         dexterResults.status === 404 ? "" :
@@ -164,7 +138,7 @@ export function CardSearch() {
                         return(
                             <Center key={index}>
                             <div className="card">
-                              <a href={"https://www.dexter.com.ar"+href} target="_blank">
+                              <a href={`../product/dexter/${href[1]}/${href[2]}`} target="_blank">
                                 <img src={img} alt="" />
                                 <img className="storeLogo" style={{backgroundColor: "black"}} src={storeLogo} alt="" />
                                 <p className="title">{title}</p>
@@ -187,7 +161,7 @@ export function CardSearch() {
           return(
               <Center key={index}>
               <div className="card">
-                <a href={href} target="_blank">
+                <a href={`../product/drops/${href}`} target="_blank">
                   <img src={img} alt="" />
                   <img className="storeLogo"  src={storeLogo} alt="" />
                   <p className="title">{title}</p>
@@ -202,6 +176,29 @@ export function CardSearch() {
 
         }
         
+        {              
+                        newBalanceResults.status === 404 ? "" :
+
+                       newBalanceResults.map((e, index) => {
+                        const { title, price, href, img, storeLogo } = e;
+        
+
+
+                        return(
+                            <Center key={index}>
+                            <div className="card">
+                              <a href={`../product/newbalance/${href}`} target="_blank">
+                                <img src={img} alt="" />
+                                <img className="storeLogo" src={storeLogo} alt="" />
+                                <p className="title">{title}</p>
+                                <p className="price">{price.replace(",", ".")}</p>
+                              </a>
+                            </div>
+                          </Center>
+                        )
+                    })
+        }
+
 
 
         </>
