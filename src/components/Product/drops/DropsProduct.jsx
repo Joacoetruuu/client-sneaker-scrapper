@@ -27,7 +27,7 @@ export function DropsProduct() {
   
           <div className="galery">
   
-              <div className="main-image" style={{width: "900px"}}>
+              <div className="main-image" >
                 {
   
                   productData[0] != undefined ? 

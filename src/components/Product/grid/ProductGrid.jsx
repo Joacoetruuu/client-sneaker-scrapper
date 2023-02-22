@@ -30,7 +30,7 @@ export function Product() {
 
           
 
-            <div className="main-image" style={{width: "900px"}}>
+            <div className="main-image">
               {
 
                 productData[0] != undefined ? 
@@ -47,7 +47,7 @@ export function Product() {
                         productData[0].images.map(image => (
                           
                           mainPhoto === "" ? setMainPhoto(productData[0].images[0]): 
-                          <img src={image }  onClick={() => handleThumbnailClick(image)} />
+                          <img src={image } className="thumbailPhoto" onClick={() => handleThumbnailClick(image)} />
                         ))
                         :
                           ""

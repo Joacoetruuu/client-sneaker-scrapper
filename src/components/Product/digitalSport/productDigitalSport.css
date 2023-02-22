@@ -4,11 +4,12 @@
   
   .main-image img {
     height: 100%;
-    width: 65%;
+    width: 900px;
     object-fit: contain;
     margin: auto;
     padding: 5px;
     border: none;
+
   }
   
   .thumbnails {
@@ -152,4 +153,47 @@
 
 .sizeSkeleton{
   margin: 20px;
+}
+
+@media (max-width: 768px) {
+
+
+  .divProduct{
+    padding: 20px;
+  }
+
+  .divProduct > .galery > .thumbnails{
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%  ;
+    margin: auto;
+  }
+
+  .divProduct > .galery > .thumbnails > .thumbailPhoto{
+    margin: 10px auto;
+
+  }
+
+  .divProduct > * {
+    max-width: 100%;
+  }
+  .divProduct > .infoProduct > div{
+    max-width: 90vw;
+  }
+
+  .divProduct > .infoProduct > p.price{
+    padding: 2px;
+    width: 40vw;
+  
+  }
+
+  .divProduct > .infoProduct > div > ul{
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  
+
+
+
 }

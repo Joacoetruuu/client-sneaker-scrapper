@@ -1,5 +1,5 @@
 import { Skeleton, SkeletonCircle, SkeletonText,Stack } from '@chakra-ui/react'
-
+import "./productGrid.css"
 export function SkeletonDescription() {
   return (
     <div className='description'>
@@ -15,7 +15,7 @@ export function SkeletonDescription() {
 export function SkeletonTitle() {
     return (
         <div className='titleSkeleton'>
-                        <Skeleton height='20px' max-width={"800px"}/>
+                        <Skeleton height='20px'/>
 
         </div>
           
@@ -25,7 +25,7 @@ export function SkeletonTitle() {
   export function SkeletonPrice() {
     return (
         <div className='priceSkeleton'>
-                        <Skeleton height='20px' max-width={"500px"}/>
+                        <Skeleton height='20px' />
 
         </div>
           
@@ -35,7 +35,7 @@ export function SkeletonTitle() {
   export function SkeletonSizes() {
     return (
         <div className='sizeSkeleton'>
-                        <Skeleton height='20px' max-width={"900px"}/>
+                        <Skeleton height='20px' />
 
         </div>
           
@@ -45,7 +45,7 @@ export function SkeletonTitle() {
   export function SkeletonImage() {
     return (
         
-                        <Skeleton height='300px' max-width={"900px"} margin="auto" paddingLeft={"20px"}/>
+          <Skeleton height='300px' margin="auto" paddingLeft={"20px"}/>
 
        
           
