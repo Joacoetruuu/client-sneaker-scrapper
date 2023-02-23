@@ -201,12 +201,12 @@
     width: 95%;
     margin-left: 20px;
     margin-top: 200px;
-    
-    
-    
   }
   
 
-
+  .sizeSkeleton, .description > .skeleton, .titleSkeleton, .priceSkeleton{
+    border: none;
+    width: 80vw;
+  }
 
 }

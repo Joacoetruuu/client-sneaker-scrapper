@@ -195,5 +195,10 @@
   
 
 
+  .sizeSkeleton, .description > .skeleton, .titleSkeleton, .priceSkeleton{
+    border: none;
+    width: 80vw;
+  }
+
 
 }
