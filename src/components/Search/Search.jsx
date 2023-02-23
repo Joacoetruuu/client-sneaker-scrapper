@@ -7,7 +7,13 @@ import ButtonTop from "../ButtonTop/ButtonTop"
 import { Filters } from "../Filters/Filters"
 
 
+
 export function Search() {
+
+  useState(() => {
+    let titleMayus = localStorage.getItem("search")[0].toUpperCase() + localStorage.getItem("search").slice(1);
+    document.title = `${titleMayus} - Sneaker Scrapper`
+  }, [])
 
   console.log(document.getElementsByClassName("spinner").length )
 

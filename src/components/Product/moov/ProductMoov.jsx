@@ -25,6 +25,13 @@ export function ProductMoov() {
     get();
   }, [])
 
+  
+  useEffect(() => {
+    productData[0] != undefined ? 
+    document.title = productData[0].title :
+    "Sneaker Scrapper"
+  }, [productData])
+
   return (
     <div className="divProduct">
 

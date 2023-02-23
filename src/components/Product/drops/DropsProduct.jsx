@@ -20,7 +20,14 @@ export function DropsProduct() {
         setProductData(await productDrops(urlSplit[5], urlSplit[6] ))
       }
       get();
-    }, [])
+    }, [])  
+
+    
+  useEffect(() => {
+    productData[0] != undefined ? 
+    document.title = productData[0].title :
+    "Sneaker Scrapper"
+  }, [productData])
   
     return (
       <div className="divProduct">
