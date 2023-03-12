@@ -27,6 +27,8 @@ export function CardSearch() {
             setNewBalance(await newBalance(inputUrl[inputUrl.length - 1]))
             setDexter(await dexter(inputUrl[inputUrl.length - 1]))
             setDrops(await drops(inputUrl[inputUrl.length - 1]))  
+            setAdidasResults(await getAdidas(inputUrl[inputUrl.length - 1]).replace("?", ""))
+            
             
         }
         results()
@@ -66,43 +68,59 @@ export function CardSearch() {
         <>  
         
         {
-                        gridResults.status === 404 ? "" :
+                        gridResults.title === 404 ? ""  :
 
                         gridResults.map((e, index) => {
                             const { title, price, href, img, storeLogo } = e;
-            
-                            return(
+
+                            if(title === 4040){
+                              return
+                            }else{
+
+                              return(
                                 <Center key={index}>
                                 <div className="card">
                                   <a href={"../product/grid/"+href} target="_blank">
                                     <img src={img} alt="" />
                                     <img className="storeLogo" src={storeLogo} alt="" />
                                     <p className="title">{title}</p>
-                                    <p className="price">{price.replace(",", ".")}</p>
+                                    <p className="price">{price.replace(",", ".") || price }</p>
                                   </a>
                                 </div>
                               </Center>
                             )
+
+                            }
+
+
                         })
         }
         {
-                        moovResults.status === 404 ? "" :
+                        moovResults.title === 404 ? "" :
 
                         moovResults.map((e, index) => {
                             const { title, price, href, img, storeLogo } = e;
-            
-                            return(
+
+                            if(title === 404){
+                              return
+                            }else{
+
+                              return(
                                 <Center key={index}>
                                 <div className="card">
                                   <a href={`../product/moov/${href[1]}/${href[2]}`} target="_blank">
                                     <img src={img} alt="" />
                                     <img style={{backgroundColor: "black"}} className="storeLogo" src={storeLogo} alt="" />
                                     <p className="title">{title}</p>
-                                    <p className="price">{price.replace(",", ".")}</p>
+                                    <p className="price">{price.replace(",", ".") || price }</p>
                                   </a>
                                 </div>
                               </Center>
                             )
+
+                            }
+
+
                         })
         }
 
@@ -111,65 +129,90 @@ export function CardSearch() {
 
                         digitalsportResults.map((e, index) => {
                             const { title, price, href, img, storeLogo } = e;
-            
-                            return(
+
+                            if(title === 404){
+                              return
+                            }else{
+                              return(
                                 <Center key={index}>
                                 <div className="card">
                                   <a href={`../product/digitalsport/${href[1]}/${href[2]}/${href[3]}`} target="_blank">
                                     <img src={img} alt="" />
                                     <img className="storeLogo" src={storeLogo} alt="" />
                                     <p className="title">{title}</p>
-                                    <p className="price">{price.replace(",", ".")}</p>
+                                    <p className="price">{price.replace(",", ".") || price }</p>
                                   </a>
                                 </div>
                               </Center>
                             )
+                            }
                         })
         }
 
+        {
+
+
+
+        }
 
         
         {              
-                        dexterResults.status === 404 ? "" :
+                        dexterResults.title === 404 ? ""  :
 
                         dexterResults.map((e, index) => {
                         const { title, price, href, img, storeLogo } = e;
-        
-                        return(
+                        
+                        if(title === 404){
+                          return
+                        }else{
+
+                          return(
                             <Center key={index}>
                             <div className="card">
                               <a href={`../product/dexter/${href[1]}/${href[2]}`} target="_blank">
                                 <img src={img} alt="" />
                                 <img className="storeLogo" style={{backgroundColor: "black"}} src={storeLogo} alt="" />
                                 <p className="title">{title}</p>
-                                <p className="price">{price.replace(",", ".")}</p>
+                                <p className="price">{price.replace(",", ".") || price}</p>
                               </a>
                             </div>
                           </Center>
-                        )
+                          )
+
+                        }
+
+
                     })
         }
 
 
         {
 
-          dropsResults.status === 404 ? "" :
+          dropsResults.title === 404 ? ""  :
 
           dropsResults.map((e, index) => {
           const { title, price, href, img, storeLogo } = e;
 
-          return(
-              <Center key={index}>
-              <div className="card">
-                <a href={`../product/drops/${href}`} target="_blank">
-                  <img src={img} alt="" />
-                  <img className="storeLogo"  src={storeLogo} alt="" />
-                  <p className="title">{title}</p>
-                  <p className="price">{price.replace(",", ".")}</p>
-                </a>
-              </div>
-            </Center>
-          )
+          if(title === 404){
+            return 
+          }else{
+
+              return(
+                <Center key={index}>
+                <div className="card">
+                  <a href={`../product/drops/${href}`} target="_blank">
+                    <img src={img} alt="" />
+                    <img className="storeLogo"  src={storeLogo} alt="" />
+                    <p className="title">{title}</p>
+                    <p className="price">{price.replace(",", ".") || price}</p>
+                  </a>
+                </div>
+              </Center>
+            )
+
+          }
+
+
           })
 
 
@@ -177,25 +220,29 @@ export function CardSearch() {
         }
         
         {              
-                        newBalanceResults.status === 404 ? "" :
+                        newBalanceResults.title === 404 ? ""  :
 
                        newBalanceResults.map((e, index) => {
                         const { title, price, href, img, storeLogo } = e;
         
-
-
-                        return(
+                        if(title === 404){
+                          return
+                        }else{
+                          return(
                             <Center key={index}>
                             <div className="card">
                               <a href={`../product/newbalance/${href}`} target="_blank">
                                 <img src={img} alt="" />
                                 <img className="storeLogo" src={storeLogo} alt="" />
                                 <p className="title">{title}</p>
-                                <p className="price">{price.replace(",", ".")}</p>
+                                <p className="price">{price.replace(",", ".") || price }</p>
                               </a>
                             </div>
                           </Center>
                         )
+                        }
+
+
                     })
         }
 

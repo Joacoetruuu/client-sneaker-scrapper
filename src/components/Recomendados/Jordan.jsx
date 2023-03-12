@@ -44,25 +44,29 @@ function Jordan() {
         SkeletonRecomendados()
 
         : 
+                  
+        jordan?.map((e, index) => {
 
-        jordan.map((e, index) => {
+          
+
           const { title, price, href, img, storeLogo } = e;
 
           if (index < 5) {
             return (
               <Center key={index}>
                 <div className="cardLanding">
-                  <a href={"/product/grid/"+href} target="_blank">
+                  <a href={"/product/grid/"+href } target="_blank">
                     <img src={img} alt="" />
                     <img className="storeLogo" src={storeLogo} alt="" />
                     <p className="title">{title}</p>
-                    <p className="price">{price.replace(",", ".")}</p>
+                    <p className="price">{price.replace(",", ".") || price}</p>
                   </a>
                 </div>
               </Center>
             );
           }
         })}
+
       </div>
     </>
 
