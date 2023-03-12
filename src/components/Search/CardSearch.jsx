@@ -73,7 +73,7 @@ export function CardSearch() {
                         gridResults.map((e, index) => {
                             const { title, price, href, img, storeLogo } = e;
 
-                            if(title === 4040){
+                            if(title === 404){
                               return
                             }else{
 
