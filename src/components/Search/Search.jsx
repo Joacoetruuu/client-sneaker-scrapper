@@ -31,6 +31,7 @@ export function Search() {
               <CardSearch/>
           </div>
 
+          <ButtonTop></ButtonTop>
         
 
     </>

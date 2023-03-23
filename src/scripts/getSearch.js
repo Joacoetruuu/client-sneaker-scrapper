@@ -1,6 +1,6 @@
 export async function getGrid(input){
     try{
-        const res = await fetch(`https://hypescrap-production.up.railway.app/grid/${input}`).catch(error => console.log("error", error))
+        const res = await fetch(`https://hypescrap-production.up.railway.app/grid/${input}` || `http://localhost:3000/grid/${input}`).catch(error => console.log("error", error))
 
         if(res === undefined){
             return [
@@ -35,7 +35,7 @@ export async function getDigital(input){
 
 
 
-        const res = await fetch(`https://hypescrap-production.up.railway.app/digitalsport/${input}`).catch(error => console.log("error", error))
+        const res = await fetch(`https://hypescrap-production.up.railway.app/digitalsport/${input}` || `http://localhost:3000/digitalsport/${input}`).catch(error => console.log("error", error))
     
         if(res === undefined){
             return [
@@ -67,7 +67,7 @@ export async function moov(input){
 
     try{
 
-        const res = await fetch(`https://hypescrap-production.up.railway.app/moov/${input}`).catch(error => console.log("error", error))
+        const res = await fetch(`https://hypescrap-production.up.railway.app/moov/${input}` || `http://localhost:3000/moov/${input}` ).catch(error => console.log("error", error))
     
         
         if(res === undefined){
@@ -98,7 +98,7 @@ export async function moov(input){
 
 export async function newBalance(input){
     try{
-        const res  = await fetch(`https://hypescrap-production.up.railway.app/newbalance/${input}`).catch(error => console.log("error", error))
+        const res  = await fetch(`https://hypescrap-production.up.railway.app/newbalance/${input}` || `http://localhost:3000/newbalance/${input}` ).catch(error => console.log("error", error))
 
         if(res === undefined){
             return [
@@ -128,7 +128,7 @@ export async function newBalance(input){
 export async function dexter(input){
 
     try{
-        const res  = await fetch(`https://hypescrap-production.up.railway.app/dexter/${input}`).catch(error => console.log("error", error))
+        const res  = await fetch(`https://hypescrap-production.up.railway.app/dexter/${input}` || `http://localhost:3000/dexter/${input}` ).catch(error => console.log("error", error))
 
         if(res === undefined){
             return [
@@ -158,7 +158,7 @@ export async function dexter(input){
 export async function drops(input){
     try{
 
-        const res  = await fetch(`https://hypescrap-production.up.railway.app/drops/${input}`).catch(error => console.log("error", error))
+        const res  = await fetch(`https://hypescrap-production.up.railway.app/drops/${input}` || `http://localhost:3000/drops/${input}` ).catch(error => console.log("error", error))
     
         if(res === undefined){
             return [
