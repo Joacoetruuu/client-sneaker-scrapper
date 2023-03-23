@@ -27,7 +27,7 @@ export function Search() {
             marginTop={"10px"}
           />
       
-          <div className="gridCardSearch">
+          <div className="gridCardSearch" >
               <CardSearch/>
           </div>
 

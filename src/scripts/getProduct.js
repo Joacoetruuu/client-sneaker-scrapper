@@ -22,7 +22,7 @@ export async function productMoov(linkProduct1, linkProduct2){
 
 export async function productDigitalSport(linkProduct1, linkProduct2, linkProduct3){
     try{
-        const res = await fetch(`https://hypescrap-production.up.railway.app/digitalsport/product/${linkProduct1}/${linkProduct2}/${linkProduct3}/` `http://localhost:3000/digitalsport/product/${linkProduct1}/${linkProduct2}/${linkProduct3}/`).catch(error => console.log(error))
+        const res = await fetch(`https://hypescrap-production.up.railway.app/digitalsport/product/${linkProduct1}/${linkProduct2}/${linkProduct3}/`).catch(error => console.log(error))
         const data = await res.json()
         return data
     }catch(error){
