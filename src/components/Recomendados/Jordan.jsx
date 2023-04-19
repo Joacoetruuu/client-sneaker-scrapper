@@ -11,7 +11,7 @@ function Jordan() {
 
   useEffect(() => {
     async function get() {
-      setJordan(await getGrid("jordan"));
+      setJordan(await getGrid("jordan 1"));
     }
     get();
   }, []);
