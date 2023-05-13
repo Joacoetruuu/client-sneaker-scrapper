@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { getGrid } from "../../scripts/getSearch"
+import { getGridLanding } from "../../scripts/getSearch"
 import { Text, Center, Box, Stack, SkeletonText } from '@chakra-ui/react'
 import "./recomendados.css"
 import { SkeletonRecomendados } from "./SkeletonRecomendados";
@@ -11,7 +11,7 @@ function Jordan() {
 
   useEffect(() => {
     async function get() {
-      setJordan(await getGrid("jordan 1"));
+      setJordan(await getGridLanding("jordan 1"));
     }
     get();
   }, []);

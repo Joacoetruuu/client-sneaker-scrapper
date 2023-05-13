@@ -5,7 +5,7 @@ import "./search.css"
 import { Text, Center, Box} from '@chakra-ui/react'
 import ButtonTop from "../ButtonTop/ButtonTop"
 import { Filters } from "../Filters/Filters"
-
+import { Footer } from "../Footer/Footer"
 
 
 export function Search() {
@@ -33,11 +33,12 @@ export function Search() {
       
           <div className="gridCardSearch" >
               <CardSearch/>
+              
           </div>
-
+          
           <ButtonTop></ButtonTop>
         
-
+        
     </>
   )
   

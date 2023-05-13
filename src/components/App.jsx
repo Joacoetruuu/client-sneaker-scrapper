@@ -5,6 +5,7 @@ import {Box} from '@chakra-ui/react'
 import Jordan from "./Recomendados/Jordan"
 import { Banners } from "./Banners/Banners"
 import Nmd from "./Recomendados/Nmd"
+import { Footer } from "./Footer/Footer"
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
       <Jordan/>
       <Banners/>
       <Nmd/>
-
+      
     </>
   )
 }

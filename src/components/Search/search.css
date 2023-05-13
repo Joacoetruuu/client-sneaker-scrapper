@@ -5,7 +5,7 @@
     justify-content: center; /* centra horizontalmente los elementos */
     margin: 80px 100px;
     height: 50vh;
-    
+    gap: 70px;
 }
 
 h3.price{
@@ -74,6 +74,11 @@ h2.title{
     transition: all .3s;
 }
 
+
+.card{
+    border: #0064fa 1px solid;
+}
+
 @media only screen and (max-width: 768px) {
 
     .gridCardSearch{
@@ -86,9 +91,7 @@ h2.title{
 
     }
 
-    .card{
-        border: #0064fa 1px solid;
-    }
+
     
     
     .card > p.title{
@@ -120,8 +123,20 @@ h2.title{
     width: 60px;
     height: 60px;
     animation: spin 2s linear infinite;
+    position: relative;
+    display: flex;
+    flex-direction: row;
   }
   
+  .loader-div{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }

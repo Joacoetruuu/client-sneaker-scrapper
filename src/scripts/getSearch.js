@@ -29,6 +29,38 @@ export async function getGrid(input){
 
 }
 
+export async function getGridLanding(input){
+    try{
+        const res = await fetch(`https://hypescrap-production.up.railway.app/landing/grid/${input}` || `http://localhost:3000/grid/${input}`).catch(error => console.log("error", error))
+
+        if(res === undefined){
+            return [
+                {
+                    "title": "title",
+                    "price": "price",
+                    "img": "img",
+                    "href": "href",
+                    "storeLogo": "storeLogo"
+                }
+            ]
+        }
+        
+        const data = await res.json(); 
+    
+        return data
+
+
+    }
+    catch(error){
+        return [
+            {"status": error}
+        ]
+    }
+
+
+}
+
+
 export async function getDigital(input){
 
     try{
@@ -62,6 +94,42 @@ export async function getDigital(input){
     }
 
 }
+
+
+export async function getDigitalLanding(input){
+
+    try{
+
+
+
+        const res = await fetch(`https://hypescrap-production.up.railway.app/landing/digitalsport/${input}` || `http://localhost:3000/digitalsport/${input}`).catch(error => console.log("error", error))
+    
+        if(res === undefined){
+            return [
+                {
+                    "title": "title",
+                    "price": "price",
+                    "img": "img",
+                    "href": "href",
+                    "storeLogo": "storeLogo"
+                }
+            ]
+        }
+    
+        const data = await res.json();
+    
+        return data
+
+
+    }
+    catch(error){
+        return [
+            {"status": error}
+        ]
+    }
+
+}
+
 
 export async function moov(input){
 

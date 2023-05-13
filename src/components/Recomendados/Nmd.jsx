@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getDigital, getGrid } from "../../scripts/getSearch";
+import { getDigitalLanding } from "../../scripts/getSearch";
 import { Text, Center, Box, Stack, SkeletonText } from "@chakra-ui/react";
 import "./recomendados.css";
 import { SkeletonRecomendados } from "./SkeletonRecomendados";
@@ -9,7 +9,7 @@ function Nmd() {
 
   useEffect(() => {
     async function get() {
-      setNmd(await getDigital("nmd"));
+      setNmd(await getDigitalLanding("nmd"));
     }
     get();
   }, []);
