@@ -67,7 +67,24 @@
 
 .cardLanding > .price{
     font-size: medium;
+    
 }
+
+h2.title{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+h3.price{
+    background-color: #0064fa;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+}
+
 
 .cardLanding:hover{
     transform: scale(1.02);

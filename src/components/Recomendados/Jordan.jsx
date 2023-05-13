@@ -28,6 +28,7 @@ function Jordan() {
             bgGradient="linear(to-l, #3182ce, #0064fa)"
           >
             <Text
+              as={"h2"}
               bg="white"
               bgClip="text"
               fontSize="2xl"
@@ -56,10 +57,10 @@ function Jordan() {
               <Center key={index}>
                 <div className="cardLanding">
                   <a href={"/product/grid/"+href } target="_blank">
-                    <img src={img} alt="" />
-                    <img className="storeLogo" src={storeLogo} alt="" />
-                    <p className="title">{title}</p>
-                    <p className="price">{price.replace(",", ".") || price}</p>
+                    <img loading="lazy" src={img} alt={title} title={title} />
+                    <img loading="lazy" className="storeLogo" src={storeLogo} alt={href} />
+                    <h2 className="title">{title}</h2>
+                    <h3 className="price">{price.replace(",", ".") || price}</h3>
                   </a>
                 </div>
               </Center>

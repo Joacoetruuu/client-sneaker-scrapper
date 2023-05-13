@@ -12,6 +12,7 @@ function Title() {
     >
       
         <Text
+          as={"h1"}
           bgGradient="linear(to-l, #3182ce, #0064fa)"
           bgClip="text"
           fontSize="4xl"

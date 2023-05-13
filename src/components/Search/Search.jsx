@@ -11,7 +11,11 @@ import { Filters } from "../Filters/Filters"
 export function Search() {
 
   useState(() => {
-    let titleMayus = localStorage.getItem("search")[0].toUpperCase() + localStorage.getItem("search").slice(1);
+    const path = decodeURIComponent(window.location.pathname);
+    const arrayPath = path.split("/")
+    const titleWindow = arrayPath[arrayPath.length-1]
+    
+    let titleMayus = titleWindow[0].toUpperCase() + titleWindow.slice(1);
     document.title = `${titleMayus} - Sneaker Scrapper`
   }, [])
 

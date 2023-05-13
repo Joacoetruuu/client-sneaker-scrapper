@@ -77,15 +77,15 @@ export function CardSearch() {
               return;
             } else {
               return (
-                <Center key={index}>
+                <Center as="article" key={index}>
                   <div className="card">
                     <a href={"../product/grid/" + href} target="_blank">
-                      <img src={img} alt="" />
-                      <img className="storeLogo" src={storeLogo} alt="" />
-                      <p className="title">{title}</p>
-                      <p className="price">
-                        {price.replace(",", ".") || price}
-                      </p>
+                      <img src={img} alt={title} title={title} />
+                      <img className="storeLogo" src={storeLogo} alt="Grid" title="Grid" />
+                      <h2 className="title">{title}</h2>
+                      <h3 className="price">
+                        {price.toLocaleString("es-AR", { style: "currency", currency: "ARS" }) || price}
+                      </h3>
                     </a>
                   </div>
                 </Center>
@@ -101,23 +101,24 @@ export function CardSearch() {
               return;
             } else {
               return (
-                <Center key={index}>
+                <Center as="article" key={index}>
                   <div className="card">
                     <a
                       href={`../product/moov/${href[1]}/${href[2]}`}
                       target="_blank"
                     >
-                      <img src={img} alt="" />
+                      <img src={img} alt={title} title={title} />
                       <img
                         style={{ backgroundColor: "black" }}
                         className="storeLogo"
                         src={storeLogo}
-                        alt=""
+                        alt="Moov"
+                        title="Moov"
                       />
-                      <p className="title">{title}</p>
-                      <p className="price">
-                        {price.replace(",", ".") || price}
-                      </p>
+                      <h2 className="title">{title}</h2>
+                      <h3 className="price">
+                      {price.toLocaleString("es-AR", { style: "currency", currency: "ARS" }) || price}
+                      </h3>
                     </a>
                   </div>
                 </Center>
@@ -134,18 +135,18 @@ export function CardSearch() {
               return;
             } else {
               return (
-                <Center key={index}>
+                <Center as="article" key={index}>
                   <div className="card">
                     <a
                       href={`../product/digitalsport/${href[1]}/${href[2]}/${href[3]}`}
                       target="_blank"
                     >
-                      <img src={img} alt="" />
-                      <img className="storeLogo" src={storeLogo} alt="" />
-                      <p className="title">{title}</p>
-                      <p className="price">
-                        {price.replace(",", ".") || price}
-                      </p>
+                      <img src={img} title={title} alt={title} />
+                      <img className="storeLogo" src={storeLogo} alt="Digital Sport" title="Digital Sport" />
+                      <h2 className="title">{title}</h2>
+                      <h3 className="price">
+                      {price.toLocaleString("es-AR", { style: "currency", currency: "ARS" }) || price}
+                      </h3>
                     </a>
                   </div>
                 </Center>
@@ -164,23 +165,23 @@ export function CardSearch() {
               return;
             } else {
               return (
-                <Center key={index}>
+                <Center as="article" key={index}>
                   <div className="card">
                     <a
                       href={`../product/dexter/${href[1]}/${href[2]}`}
                       target="_blank"
                     >
-                      <img src={img} alt="" />
+                      <img src={img} alt={title} title={title} />
                       <img
                         className="storeLogo"
                         style={{ backgroundColor: "black" }}
                         src={storeLogo}
-                        alt=""
+                        alt="Dexter"
                       />
-                      <p className="title">{title}</p>
-                      <p className="price">
-                        {price.replace(",", ".") || price}
-                      </p>
+                      <h2 className="title">{title}</h2>
+                      <h3 className="price">
+                      {price.toLocaleString("es-AR", { style: "currency", currency: "ARS" }) || price}
+                      </h3>
                     </a>
                   </div>
                 </Center>
@@ -197,15 +198,15 @@ export function CardSearch() {
               return;
             } else {
               return (
-                <Center key={index}>
+                <Center as="article" key={index}>
                   <div className="card">
                     <a href={`../product/drops/${href}`} target="_blank">
-                      <img src={img} alt="" />
-                      <img className="storeLogo" src={storeLogo} alt="" />
-                      <p className="title">{title}</p>
-                      <p className="price">
-                        {price.replace(",", ".") || price}
-                      </p>
+                      <img src={img} alt={title} title={title} />
+                      <img className="storeLogo" src={storeLogo} alt="Drops" />
+                      <h2 className="title">{title}</h2>
+                      <h3 className="price">
+                      {price.toLocaleString("es-AR", { style: "currency", currency: "ARS" }) || price}
+                      </h3>
                     </a>
                   </div>
                 </Center>
@@ -222,15 +223,15 @@ export function CardSearch() {
               return;
             } else {
               return (
-                <Center key={index}>
+                <Center as="article" key={index}>
                   <div className="card">
                     <a href={`../product/newbalance/${href}`} target="_blank">
-                      <img src={img} alt="" />
-                      <img className="storeLogo" src={storeLogo} alt="" />
-                      <p className="title">{title}</p>
-                      <p className="price">
-                        {price.replace(",", ".") || price}
-                      </p>
+                      <img src={img} alt={title} title={title} />
+                      <img className="storeLogo" src={storeLogo} alt="New Balance" title="New Balance" />
+                      <h2 className="title">{title}</h2>
+                      <h3 className="price">
+                      {price.toLocaleString("es-AR", { style: "currency", currency: "ARS" }) || price}
+                      </h3>
                     </a>
                   </div>
                 </Center>
