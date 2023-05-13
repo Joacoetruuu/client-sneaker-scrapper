@@ -68,12 +68,13 @@ export function CardSearch() {
 
   return (
     <>
-      {gridResults.title === 404
+      {gridResults.status === 404
         ? ""
-        : gridResults.map((e, index) => {
-            const { title, price, href, img, storeLogo } = e;
 
-            if (title === 404) {
+        : gridResults.map((e, index) => {
+            const { title, price, href, img, storeLogo, status } = e;
+
+            if (status === 404) {
               return;
             } else {
               return (
@@ -101,12 +102,12 @@ export function CardSearch() {
             }
           })}
 
-      {moovResults.title === 404
+      {moovResults.status === 404
         ? ""
         : moovResults.map((e, index) => {
-            const { title, price, href, img, storeLogo } = e;
+            const { title, price, href, img, storeLogo, status } = e;
 
-            if (title === 404) {
+            if (status === 404) {
               return;
             } else {
               return (
@@ -141,9 +142,9 @@ export function CardSearch() {
       {digitalsportResults.status === 404
         ? ""
         : digitalsportResults.map((e, index) => {
-            const { title, price, href, img, storeLogo } = e;
+            const { title, price, href, img, storeLogo, status } = e;
 
-            if (title === 404) {
+            if (status === 404) {
               return;
             } else {
               return (
@@ -176,12 +177,12 @@ export function CardSearch() {
 
       {}
 
-      {dexterResults.title === 404
+      {dexterResults.status === 404
         ? ""
         : dexterResults.map((e, index) => {
-            const { title, price, href, img, storeLogo } = e;
+            const { title, price, href, img, storeLogo, status } = e;
 
-            if (title === 404) {
+            if (status === 404) {
               return;
             } else {
               return (
@@ -214,13 +215,13 @@ export function CardSearch() {
 
       {dropsResults.length == 0 ? (
         <SpinnerLoader />
-      ) : dropsResults.title === 404 ? (
+      ) : dropsResults.status === 404 ? (
         ""
       ) : (
         dropsResults.map((e, index) => {
-          const { title, price, href, img, storeLogo } = e;
+          const { title, price, href, img, storeLogo, status } = e;
 
-          if (title === 404) {
+          if (status === 404) {
             return;
           } else {
             return (
@@ -244,12 +245,12 @@ export function CardSearch() {
         })
       )}
 
-      {newBalanceResults.title === 404
+      {newBalanceResults.status === 404
         ? ""
         : newBalanceResults.map((e, index) => {
-            const { title, price, href, img, storeLogo } = e;
+            const { title, price, href, img, storeLogo, status } = e;
 
-            if (title === 404) {
+            if (status === 404) {
               return;
             } else {
               return (

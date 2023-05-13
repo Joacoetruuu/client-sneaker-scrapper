@@ -19,7 +19,6 @@ function App() {
       <Jordan/>
       <Banners/>
       <Nmd/>
-      
     </>
   )
 }

@@ -1,11 +1,8 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, Suspense } from "react"
 import { getGridLanding } from "../../scripts/getSearch"
 import { Text, Center, Box, Stack, SkeletonText } from '@chakra-ui/react'
 import "./recomendados.css"
 import { SkeletonRecomendados } from "./SkeletonRecomendados";
-
-
-
 function Jordan() {
   const [jordan, setJordan] = useState([]);
 
