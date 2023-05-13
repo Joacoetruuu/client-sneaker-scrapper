@@ -30,6 +30,7 @@ function ButtonTop() {
 
   return (
     <button
+      aria-label="Ir hasta arriba de la página" title="Ir hasta arriba de la página"
       variant="primary"
       className={`scroll-to-top-btn ${isVisible ? 'show' : 'hide'}`}
       onClick={scrollToTop}

@@ -28,12 +28,12 @@ export function Nav() {
       <nav>
         <form action="" onSubmit={e => handleSubmit(e)}>
           
-          <input type="text" autoFocus onChange={e => {
+          <input aria-label="Ingresa el modelo de la zapatilla" type="text" autoFocus onChange={e => {
             setInputUser(e.target.value)
             localStorage.setItem("search", e.target.value)
           
           }}/>
-          <button><AiOutlineSearch></AiOutlineSearch> <p style={{display:"none"}}>Buscar</p></button>
+          <button aria-label="Enviar formulario" title="Haz clic para enviar el formulario" ><AiOutlineSearch></AiOutlineSearch> <p style={{display:"none"}}>Buscar</p></button>
         </form>
 
 
