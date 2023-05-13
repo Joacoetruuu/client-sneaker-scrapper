@@ -20,7 +20,30 @@ export function CardSearch() {
   const url = window.location.href;
   const inputUrl = url.split("/");
 
-  useEffect(() => {
+
+
+
+  useEffect(() => { 
+
+    const path = decodeURIComponent(window.location.pathname);
+    const arrayPath = path.split("/")
+    const titleWindow = arrayPath[arrayPath.length-1]
+    
+    let titleMayus = titleWindow[0].toUpperCase() + titleWindow.slice(1);
+
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        'content',
+        `Encuentra las últimas zapatillas ${titleMayus} en Argentina con nuestra búsqueda especializada. Descubre los diferentes colores y ediciones de las icónicas zapatillas ${titleMayus}. Compara precios y encuentra la mejor oferta para añadir este clásico a tu colección. Todo en una sola página.`      );
+    }
+
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      const keywords = ` ${titleMayus}, Zapatillas en Argentina, Buscador de zapatillas, Comparador de precios de zapatillas, Últimos modelos de zapatillas, Tiendas de zapatillas en línea, Marcas populares de zapatillas, Zapatillas de moda en Argentina, Comprar zapatillas en línea, Ofertas de zapatillas en Argentina, Catálogo de zapatillas en Argentina, Grid, Moov, Dexter, Drops, New Balance, Digital Sport`;
+      metaKeywords.setAttribute('content', keywords);
+    }
+
     async function results() {
       setMoov(await moov(inputUrl[inputUrl.length - 1]));
       setGrid(await getGrid(inputUrl[inputUrl.length - 1]));
