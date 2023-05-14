@@ -10,6 +10,7 @@ import {
 import { Text, Center, Box, Spinner } from "@chakra-ui/react";
 import SpinnerLoader from "./SpinnerLoader";
 import { Footer } from "../Footer/Footer";
+import NoProducts from "./NoProducts";
 
 export function CardSearch() {
   const [moovResults, setMoov] = useState([]);
@@ -48,8 +49,8 @@ export function CardSearch() {
       setMoov(await moov(inputUrl[inputUrl.length - 1]));
       setDigitalSport(await getDigital(inputUrl[inputUrl.length - 1]));
       setDexter(await dexter(inputUrl[inputUrl.length - 1]));
-      setDrops(await drops(inputUrl[inputUrl.length - 1]));
       setNewBalance(await newBalance(inputUrl[inputUrl.length - 1]));
+      setDrops(await drops(inputUrl[inputUrl.length - 1]));
     }
     results();
   }, []);
@@ -60,8 +61,8 @@ export function CardSearch() {
       setMoov(await moov(inputUrl[inputUrl.length - 1]));
       setDigitalSport(await getDigital(inputUrl[inputUrl.length - 1]));
       setDexter(await dexter(inputUrl[inputUrl.length - 1]));
-      setDrops(await drops(inputUrl[inputUrl.length - 1]));
       setNewBalance(await newBalance(inputUrl[inputUrl.length - 1]));
+      setDrops(await drops(inputUrl[inputUrl.length - 1]));
     }
     results();
   }, [inputUrl[inputUrl.length - 1]]);
@@ -70,7 +71,6 @@ export function CardSearch() {
     <>
       {gridResults.status === 404
         ? ""
-
         : gridResults.map((e, index) => {
             const { title, price, href, img, storeLogo, status } = e;
 
@@ -213,38 +213,6 @@ export function CardSearch() {
             }
           })}
 
-      {dropsResults.length == 0 ? (
-        <SpinnerLoader />
-      ) : dropsResults.status === 404 ? (
-        ""
-      ) : (
-        dropsResults.map((e, index) => {
-          const { title, price, href, img, storeLogo, status } = e;
-
-          if (status === 404) {
-            return;
-          } else {
-            return (
-              <Center as="article" key={index}>
-                <div className="card">
-                  <a href={`../product/drops/${href}`} target="_blank">
-                    <img src={img} alt={title} title={title} />
-                    <img className="storeLogo" src={storeLogo} alt="Drops" />
-                    <h2 className="title">{title}</h2>
-                    <h3 className="price">
-                      {price.toLocaleString("es-AR", {
-                        style: "currency",
-                        currency: "ARS",
-                      }) || price}
-                    </h3>
-                  </a>
-                </div>
-              </Center>
-            );
-          }
-        })
-      )}
-
       {newBalanceResults.status === 404
         ? ""
         : newBalanceResults.map((e, index) => {
@@ -278,7 +246,46 @@ export function CardSearch() {
             }
           })}
 
-     
+      {dropsResults.length == 0 ? (
+        <SpinnerLoader />
+      ) : dropsResults.status === 404 ? (
+        ""
+      ) : (
+        dropsResults.map((e, index) => {
+          const { title, price, href, img, storeLogo, status } = e;
+
+          if (status === 404) {
+            return;
+          } else {
+            return (
+              <Center as="article" key={index}>
+                <div className="card">
+                  <a href={`../product/drops/${href}`} target="_blank">
+                    <img src={img} alt={title} title={title} />
+                    <img className="storeLogo" src={storeLogo} alt="Drops" />
+                    <h2 className="title">{title}</h2>
+                    <h3 className="price">
+                      {price.toLocaleString("es-AR", {
+                        style: "currency",
+                        currency: "ARS",
+                      }) || price}
+                    </h3>
+                  </a>
+                </div>
+              </Center>
+            );
+          }
+        })
+      )}
+      {/* { 
+
+        moovResults.length != 0 && gridResults.length != 0 && digitalsportResults.length != 0 && newBalanceResults.length != 0  && dexterResults.length != 0  && dropsResults.length != 0  ? 
+
+          moovResults[0].status == 404 && gridResults[0].status == 404 && digitalsportResults[0].status == 404 && newBalanceResults[0].status == 404 && dexterResults[0].status == 404 && dropsResults[0].status == 404 ? <NoProducts/> : ""
+         
+        : ""
+      } */}
+
     </>
   );
 }
