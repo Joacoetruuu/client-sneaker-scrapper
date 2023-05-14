@@ -52,13 +52,17 @@ function Jordan() {
                           alt={title}
                           title={title}
                         />
+                        
                         <img
-                          loading="lazy"
-                          className="storeLogo"
-                          src={storeLogo}
-                          alt={href}
-                          style={{ backgroundColor: "black" }}
-                        />
+                            loading="lazy"
+                            className="storeLogo"
+                            src={storeLogo}
+                            alt={href}
+                            style={{ backgroundColor: "black" }}
+                          />
+                        
+
+
                         <h2 className="title">{title}</h2>
                         <h3 className="price">
                           {price.replace(",", ".") || price}

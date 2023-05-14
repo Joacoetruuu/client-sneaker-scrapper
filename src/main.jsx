@@ -14,17 +14,20 @@ import { ProductDexter } from "./components/Product/dexter/ProductDexter";
 import { DropsProduct } from "./components/Product/drops/DropsProduct";
 import { ProductNewBalance } from "./components/Product/newBalance/ProductNewBalance";
 
-
 const router = createBrowserRouter([
   {
     path: "/search",
-    element: <><App /> </>,
+    element: (
+      <>
+        <App />{" "}
+      </>
+    ),
   },
   {
     path: "/",
     element: (
       <>
-        <Nav></Nav> <App /> 
+        <Nav></Nav> <App />
       </>
     ),
   },
@@ -32,7 +35,14 @@ const router = createBrowserRouter([
     path: "/product/grid/:query/*",
     element: (
       <>
-        <Nav></Nav> <Product/>
+        <Nav></Nav>{" "}
+        <Box
+          width={"100%"}
+          height="5px"
+          bgGradient="linear(to-l, #3182ce, #0064fa)"
+          marginTop={"10px"}
+        />{" "}
+        <Product />
       </>
     ),
   },
@@ -40,7 +50,14 @@ const router = createBrowserRouter([
     path: "/product/moov/:query/:query",
     element: (
       <>
-        <Nav></Nav> <ProductMoov/>
+        <Nav></Nav>
+        <Box
+          width={"100%"}
+          height="5px"
+          bgGradient="linear(to-l, #3182ce, #0064fa)"
+          marginTop={"10px"}
+        />{" "}
+        <ProductMoov />
       </>
     ),
   },
@@ -48,7 +65,14 @@ const router = createBrowserRouter([
     path: "/product/dexter/:query/:query",
     element: (
       <>
-        <Nav></Nav> <ProductDexter/>
+        <Nav></Nav>{" "}
+        <Box
+          width={"100%"}
+          height="5px"
+          bgGradient="linear(to-l, #3182ce, #0064fa)"
+          marginTop={"10px"}
+        />
+        <ProductDexter />
       </>
     ),
   },
@@ -56,7 +80,14 @@ const router = createBrowserRouter([
     path: "/product/digitalsport/:query/:query/:query",
     element: (
       <>
-        <Nav></Nav> <ProductDigitalSport/>
+        <Nav></Nav>{" "}
+        <Box
+          width={"100%"}
+          height="5px"
+          bgGradient="linear(to-l, #3182ce, #0064fa)"
+          marginTop={"10px"}
+        />{" "}
+        <ProductDigitalSport />
       </>
     ),
   },
@@ -65,7 +96,14 @@ const router = createBrowserRouter([
     path: "/product/drops/:query",
     element: (
       <>
-        <Nav></Nav> <DropsProduct/>
+        <Nav></Nav>{" "}
+        <Box
+          width={"100%"}
+          height="5px"
+          bgGradient="linear(to-l, #3182ce, #0064fa)"
+          marginTop={"10px"}
+        />{" "}
+        <DropsProduct />
       </>
     ),
   },
@@ -74,11 +112,18 @@ const router = createBrowserRouter([
     path: "/product/newbalance/:query",
     element: (
       <>
-        <Nav></Nav> <ProductNewBalance/>
+        <Nav></Nav>{" "}
+        <Box
+          width={"100%"}
+          height="5px"
+          bgGradient="linear(to-l, #3182ce, #0064fa)"
+          marginTop={"10px"}
+        />{" "}
+        <ProductNewBalance />
       </>
     ),
   },
-  
+
   {
     path: "/search/:query",
     element: (
@@ -87,7 +132,7 @@ const router = createBrowserRouter([
       </>
     ),
   },
-  
+
   {
     path: "*",
     element: (
@@ -100,7 +145,6 @@ const router = createBrowserRouter([
           marginTop={"10px"}
         />
         <Error404></Error404>
-        
       </>
     ),
   },
