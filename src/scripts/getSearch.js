@@ -31,7 +31,7 @@ export async function getGrid(input){
 
 export async function getGridLanding(input){
     try{
-        const res = await fetch(`https://hypescrap-production.up.railway.app/landing/grid/${input}` || `http://localhost:3000/grid/${input}`).catch(error => console.log("error", error))
+        const res = await fetch(`https://hypescrap-production.up.railway.app/landing/moov/${input}` || `http://localhost:3000/moov/${input}`).catch(error => console.log("error", error))
 
         if(res === undefined){
             return [
