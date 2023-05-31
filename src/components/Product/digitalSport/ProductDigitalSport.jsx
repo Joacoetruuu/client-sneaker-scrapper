@@ -31,7 +31,7 @@ export function ProductDigitalSport() {
     useEffect(() => {
       productData[0] != undefined ? 
       document.title = productData[0].title :
-      "Sneaker Scrapper"
+      "Todo Calzado"
     }, [productData])
   
     return (
