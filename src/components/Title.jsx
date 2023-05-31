@@ -19,7 +19,7 @@ function Title() {
           fontWeight="extrabold"
           className='titleText'
         >
-          Sneaker Scrapper
+          Todo Calzado
         </Text>
       
     </Flex>
