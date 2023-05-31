@@ -16,7 +16,7 @@ export function Search() {
     const titleWindow = arrayPath[arrayPath.length-1]
     
     let titleMayus = titleWindow[0].toUpperCase() + titleWindow.slice(1);
-    document.title = `${titleMayus} - Sneaker Scrapper`
+    document.title = `${titleMayus} - Todo Calzado`
   }, [])
 
   console.log(document.getElementsByClassName("spinner").length )
