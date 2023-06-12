@@ -13,6 +13,7 @@ import { ProductDigitalSport } from "./components/Product/digitalSport/ProductDi
 import { ProductDexter } from "./components/Product/dexter/ProductDexter";
 import { DropsProduct } from "./components/Product/drops/DropsProduct";
 import { ProductNewBalance } from "./components/Product/newBalance/ProductNewBalance";
+import AlertError from "./components/Alerts/Alert";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
     path: "/",
     element: (
       <>
+        <AlertError/>
         <Nav></Nav> <App />
       </>
     ),
