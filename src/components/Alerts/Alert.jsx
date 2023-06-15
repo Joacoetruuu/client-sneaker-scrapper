@@ -1,9 +1,24 @@
+
+import { useEffect, useState } from "react"
 import "./Alert.css"
 function AlertError() {
+
+  const [alertText, setAlertText] = useState(""); 
+
+  useEffect(() => {
+
+    async function getTextAlert(){
+      const res = await fetch("https://alertas-todo-calzado-production.up.railway.app/api/alert")
+      const data = await res.text()
+      console.log(data)
+      setAlertText(data)
+    }; 
+    getTextAlert()
+
+  }, [])
+
   return (
-    <div className="alert-event">
-        <p><a href="https://drops-ba.com/product-category/calzado/zapatillas/" target="_blank">Drops</a> está en mantenimiento hasta el domingo 11/06, por lo cual no aparecen sus productos.</p>
-    </div>
+    <div dangerouslySetInnerHTML={{ __html: alertText }}/>
   )
 }
 

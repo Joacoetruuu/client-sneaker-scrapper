@@ -28,7 +28,7 @@ const router = createBrowserRouter([
     path: "/",
     element: (
       <>
-        <AlertError/>
+        <AlertError/> 
         <Nav></Nav> <App />
       </>
     ),
