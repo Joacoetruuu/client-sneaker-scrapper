@@ -13,7 +13,6 @@ export function Search() {
 
   const [nameProduct, setNameProduct] = useState("");
 
-
   useState(() => {
     const path = decodeURIComponent(window.location.pathname);
     const arrayPath = path.split("/")
@@ -23,8 +22,6 @@ export function Search() {
     setNameProduct(titleMayus)
     document.title = `${titleMayus} - Todo Calzado`
   }, [])
-
-  console.log(document.getElementsByClassName("spinner").length )
 
   return (
     <>  
