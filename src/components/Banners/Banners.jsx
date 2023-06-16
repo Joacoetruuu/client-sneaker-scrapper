@@ -14,7 +14,7 @@ export function Banners() {
         <a href={currentUrl+"search/550"}>
           <img src="https://i.ibb.co/Gsj6FfT/550.webp" alt="NEW BALANCE 550 ARGENTINA" title="new balance 550" />
         </a>
-        <a href={currentUrl+"search/adidas"}>
+        <a href={currentUrl+"search/forum"}>
           <img src="https://i.ibb.co/YcmMzgg/adidas.webp" alt="ZAPATILLA ADIDAS ARGENTINA" title="adidas" />
         </a>
     </section>

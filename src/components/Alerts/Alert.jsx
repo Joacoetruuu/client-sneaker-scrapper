@@ -10,7 +10,7 @@ function AlertError() {
     async function getTextAlert(){
       const res = await fetch("https://alertas-todo-calzado-production.up.railway.app/api/alert")
       const data = await res.text()
-      console.log(data)
+    
       setAlertText(data)
     }; 
     getTextAlert()
