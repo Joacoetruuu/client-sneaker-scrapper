@@ -8,7 +8,7 @@ function Jordan() {
 
   useEffect(() => {
     async function get() {
-      setJordan(await getGridLanding("jordan 1"));
+      setJordan(await getGridLanding("jordan"));
     }
     get();
   }, []);
@@ -37,8 +37,8 @@ function Jordan() {
           ? SkeletonRecomendados()
           : jordan?.map((e, index) => {
               const { title, price, href, img, storeLogo } = e;
-              console.log(storeLogo);
-              if (index < 5) {
+              
+              if (index < 4) {
                 return (
                   <Center key={index}>
                     <div className="cardLanding">
@@ -72,6 +72,7 @@ function Jordan() {
                   </Center>
                 );
               }
+
             })}
       </div>
     </>

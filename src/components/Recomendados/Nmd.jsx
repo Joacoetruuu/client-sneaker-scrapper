@@ -9,7 +9,7 @@ function Nmd() {
 
   useEffect(() => {
     async function get() {
-      setNmd(await getDigitalLanding("nmd"));
+      setNmd(await getDigitalLanding("dunk"));
     }
     get();
   }, []);
@@ -30,7 +30,7 @@ function Nmd() {
               fontWeight="extrabold"
               margin={"auto"}
             >
-              Nmd
+              Dunk
             </Text>
           </Box>
         </Center>
@@ -42,7 +42,7 @@ function Nmd() {
 
               const parseNumber = parseFloat(price.replace("$", ""));
 
-              if (index < 5) {
+              if (index < 4) {
                 return (
                   <Center key={index}>
                     <div className="cardLanding">
@@ -66,6 +66,7 @@ function Nmd() {
                   </Center>
                 );
               }
+              
             })}
       </div>
     </>
