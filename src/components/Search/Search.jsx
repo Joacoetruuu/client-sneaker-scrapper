@@ -38,7 +38,7 @@ export function Search() {
           </div>
           
           <ButtonTop></ButtonTop>
-        
+          <Footer></Footer>
         
     </>
   )

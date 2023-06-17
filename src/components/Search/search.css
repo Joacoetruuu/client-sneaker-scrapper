@@ -1,11 +1,11 @@
-.gridCardSearch{
+.gridCardSearch {
     display: grid;
-    grid-template-rows: repeat(10, 1fr);
     grid-template-columns: repeat(5, 1fr);
-    justify-content: center; /* centra horizontalmente los elementos */
+    justify-content: center;
     margin: 80px 100px;
-    height: 50vh;
+    
     gap: 70px;
+    grid-auto-rows: 372px; 
 }
 
 h3.price{
@@ -28,9 +28,7 @@ h3.price{
     width: 250px;
     position: relative  ;
     z-index: 1;
-    height: 372px;
-    
-    
+    height: 372px;   
 }
 
 .card > img{
@@ -151,7 +149,7 @@ h2.title{
         grid-template-columns: repeat(2, 1fr);
         justify-content: center; /* centra horizontalmente los elementos */
         margin: 80px 200px;
-        height: 50vh;
+        height: auto;
         
     }
 
@@ -165,7 +163,7 @@ h2.title{
         grid-template-columns: repeat(3, 1fr);
         justify-content: center; /* centra horizontalmente los elementos */
         margin: 80px 200px;
-        height: 50vh;
+        height: auto;
         
     }
 

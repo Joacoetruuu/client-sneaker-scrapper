@@ -1,46 +1,42 @@
-
-import "./footer.css"
+import "./footer.css";
 
 export function Footer() {
-  return (
-    <footer >
+  
+    const listaBusquedas = ["Nike", "Adidas", "Jordan", "Puma", "Dunk", "Forum"]
+
+    return (
+    <>
+      <footer>
+
+
+        <div className="acerca-de">
+            <h4>Acerca de</h4>
+            <p>Información</p>
+            <p>Preguntas frecuentes</p>
+        </div>
 
         
-        <div style={{display: "block"}}>
+        <div className="secciones-footer">
+            <h4>Secciones</h4>
 
-
-            <div className="footer" style={{backgroundColor: "white"}}>
-
-                <div>
-                    <p style={{paddingBottom: "10px", color:"#0064fa"}}>Acerca de</p>
-                    <ul>
-                        <li>Información</li>
-                        <li>Preguntas frecuentes</li>
-                        <li>Contacto</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <p style={{paddingBottom: "10px", color:"#0064fa"}}>Términos y condiciones</p>
-                </div>
-                
-                <div>
-                    <p style={{paddingBottom: "10px", color:"#0064fa"}}>Política de privacidad</p>
-                </div>
-
-                    
-
+            <div className="lista-secciones">
+            {
+                listaBusquedas.map((e)  => {
+                    return <a href={`/search/${e}`} target="_blank"> <p>{e}</p> </a>
+                })
+            }
             </div>
 
-            <div style={{display: "flex", backgroundColor: "white"}} className="copy" >
-                <p style={{margin: "auto", backgroundColor: "white"}}>Copyright © 2023 - Sneaker Scrapper - Todos los derechos reservados</p>
-            </div>
+        </div>
+
+        <div className="contacto">
+          <h4>Contacto</h4>
+          <a href="mailto:contacto@todocalzado.com.ar">contacto@todocalzado.com.ar</a>
         </div>
 
 
-            
-            
-        
-    </footer>
-  )
+      </footer>
+
+    </>
+  );
 }

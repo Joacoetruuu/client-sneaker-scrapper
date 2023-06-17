@@ -19,6 +19,7 @@ function App() {
       <Jordan/>
       <Banners/>
       <Nmd/>
+      <Footer/>
     </>
   )
 }
