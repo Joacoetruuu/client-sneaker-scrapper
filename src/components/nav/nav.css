@@ -3,12 +3,13 @@
     
 }
 
+.darkmode{
+    background-color: #262626;
+}
+
 .header{
     display: flex;
     justify-content: space-between;
-    
-    
-    
 }
 
 

@@ -1,3 +1,4 @@
+import DarkModeToggle from "../darkMode/isDarkMode";
 import "./footer.css";
 
 export function Footer() {
@@ -32,6 +33,7 @@ export function Footer() {
         <div className="contacto">
           <h4>Contacto</h4>
           <a href="mailto:contacto@todocalzado.com.ar">contacto@todocalzado.com.ar</a>
+          
         </div>
 
 

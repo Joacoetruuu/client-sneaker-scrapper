@@ -1,0 +1,15 @@
+.divFilters{
+    background-color: red;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.divFilters > ul{
+    display: flex;
+    flex-direction: row;
+}
+
+li{
+    list-style-type: none
+}

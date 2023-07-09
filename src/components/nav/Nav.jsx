@@ -7,13 +7,15 @@ import { useEffect, useState } from "react";
 import { Box} from '@chakra-ui/react'
 
 
+const isDarkMode = localStorage.getItem("darkMode")
+
 export function Nav() {
 
   const [inputUser, setInputUser] = useState("second")
 
   const navigate = useNavigate();
 
-  
+
 
   async function handleSubmit(event) {
         
@@ -21,7 +23,7 @@ export function Nav() {
   }
 
   return (
-    <header className='header'>
+    <header className="header">
       <a href="/" style={{cursor:"pointer"}}>
         <Title/>
       </a>

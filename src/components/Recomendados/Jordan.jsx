@@ -1,14 +1,14 @@
 import { useEffect, useState, Suspense } from "react";
-import { getGridLanding } from "../../scripts/getSearch";
 import { Text, Center, Box, Stack, SkeletonText } from "@chakra-ui/react";
 import "./recomendados.css";
 import { SkeletonRecomendados } from "./SkeletonRecomendados";
+import { moov } from "../../scripts/getSearch";
 function Jordan() {
   const [jordan, setJordan] = useState([]);
 
   useEffect(() => {
     async function get() {
-      setJordan(await getGridLanding("jordan"));
+      setJordan(await moov("jordan"));
     }
     get();
   }, []);
