@@ -7,13 +7,7 @@ function AlertError() {
 
   useEffect(() => {
 
-    async function getTextAlert(){
-      const res = await fetch("https://alertas-todo-calzado-production.up.railway.app/api/alert")
-      const data = await res.text()
     
-      setAlertText(data)
-    }; 
-    getTextAlert()
 
   }, [])
 
