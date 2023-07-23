@@ -130,7 +130,7 @@ export function CardSearch() {
                         {price.toLocaleString("es-AR", {
                           style: "currency",
                           currency: "ARS",
-                        }) || price}
+                        }).replace(/[^0-9.,$]/g, " ") || price}
                       </h3>
                     </a>
                   </div>
@@ -204,7 +204,7 @@ export function CardSearch() {
                         {price.toLocaleString("es-AR", {
                           style: "currency",
                           currency: "ARS",
-                        }) || price}
+                        }).replace(/[^0-9.,$]/g, " ") || price}
                       </h3>
                     </a>
                   </div>

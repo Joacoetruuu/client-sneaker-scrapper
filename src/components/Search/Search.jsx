@@ -4,7 +4,6 @@ import { CardSearch } from "./CardSearch"
 import "./search.css"
 import { Text, Center, Box} from '@chakra-ui/react'
 import ButtonTop from "../ButtonTop/ButtonTop"
-import { Filters } from "../Filters/Filters"
 import { Footer } from "../Footer/Footer"
 import { Helmet } from "react-helmet";
 
@@ -33,7 +32,9 @@ export function Search() {
             marginTop={"10px"}
           />
           
-          <div className="gridCardSearch" >
+          
+
+          <div className="gridCardSearch">
           
               <CardSearch/>
               

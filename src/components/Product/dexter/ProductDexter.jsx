@@ -58,7 +58,7 @@ export function ProductDexter() {
         </h1>
         <p className="price">
           {productData[0] != undefined
-            ? productData[0].price.replace(",", ".")
+            ? productData[0].price.replace(/[^0-9.,$]/g, " ")
             : SkeletonPrice()}
         </p>
 
