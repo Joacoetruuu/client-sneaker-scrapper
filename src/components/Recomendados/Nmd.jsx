@@ -54,11 +54,7 @@ function Nmd() {
                         <img loading="lazy" className="storeLogo" src={storeLogo} alt="" />
                         <h2 className="title">{title}</h2>
                         <h3 className="price">
-                          {parseNumber
-                            .toLocaleString("es-AR", {
-                              style: "currency",
-                              currency: "ARS",
-                            })
+                          {price
                             .replace(",", ".")}
                         </h3>
                       </a>
