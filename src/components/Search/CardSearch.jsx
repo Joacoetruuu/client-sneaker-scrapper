@@ -69,12 +69,13 @@ export function CardSearch() {
 
   return (
     <>
-      {gridResults.status === 404
+      {gridResults.status === 404 || gridResults.status === 500
         ? ""
         : gridResults.map((e, index) => {
             const { title, price, href, img, storeLogo, status } = e;
 
-            if (status === 404) {
+
+            if (status === 404 ) {
               return;
             } else {
               return (
@@ -90,7 +91,7 @@ export function CardSearch() {
                       />
                       <h2 className="title">{title}</h2>
                       <h3 className="price">
-                        {price.toLocaleString("es-AR", {
+                        {price?.toLocaleString("es-AR", {
                           style: "currency",
                           currency: "ARS",
                         }) || price}
